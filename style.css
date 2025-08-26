@@ -1,0 +1,97 @@
+/* Base Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Flexbox Navbar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+.navbar a:hover {
+  background-color: #555;
+  border-radius: 5px;
+}
+
+/* Grid Layout for Main */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr; /* Sidebar + Content */
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #f4f4f4;
+  padding: 15px;
+  border: 1px solid #ccc;
+}
+
+/* Content Section */
+.content {
+  background-color: #e2e2ff;
+  padding: 15px;
+  border: 1px solid #ccc;
+}
+
+/* Flexbox Cards */
+.cards {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #999;
+  padding: 20px;
+  flex: 1 1 calc(33% - 20px); /* 3 cards per row, flexible */
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 900px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Stack sidebar + content */
+  }
+
+  .cards {
+    flex-direction: column; /* Stack cards vertically */
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar {
+    flex-direction: column; /* Stack navbar links */
+  }
+}
